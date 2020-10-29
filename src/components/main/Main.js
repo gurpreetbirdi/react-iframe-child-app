@@ -1,10 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Container } from 'reactstrap';
 
 import './Main.css';
@@ -12,10 +7,10 @@ import Sidebar from '../sidebar/Sidebar';
 import Header from '../header/Header';
 import MainContent from './MainContent';
 
-const Main = props => {
+const Main = () => {
   return (
     <Router>
-      <Container className="themed-container" fluid={true}>
+      <Container className="themed-container" fluid>
         <Header />
         <Sidebar />
         <Switch>
@@ -26,10 +21,6 @@ const Main = props => {
       </Container>
     </Router>
   );
-}
-
-Main.propTypes = {
-  name: PropTypes.string
 };
 
 export default Main;
